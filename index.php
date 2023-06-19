@@ -1,3 +1,4 @@
+//Diese Seite Zeigt alle einträge in der DB an, sozusagen Select * from Table
 <?php 
 
 require_once 'config/db.php';
