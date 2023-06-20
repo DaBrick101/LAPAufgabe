@@ -18,7 +18,7 @@ $resultAllUser = GetAllUser_data();
   <title>Document</title>
 </head>
 <body>
-  <h1>Person Browser</h1>
+  <h1>Person Browser (All Entrys + Edit/Delete)</h1>
   <table class="table">
     <thead>
       <tr>

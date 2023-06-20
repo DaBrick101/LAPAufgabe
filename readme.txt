@@ -1,4 +1,4 @@
-In diesem Projekt geht es darum Einträge einer DB zu veranschaulichen, editiren, filtern, erstellen und löschen
+In diesem Projekt geht es darum Einträge einer DB zu veranschaulichen, editieren, filtern, erstellen und löschen
 
 Es wurd eine simple DB verwendet mit einem Table mit Personen.
 Es gibt folgende attribute:
