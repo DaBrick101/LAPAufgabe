@@ -7,6 +7,7 @@ require_once 'config/GetAllEntries.php';
 $resultAllUser = GetAllUser_data();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +29,6 @@ $resultAllUser = GetAllUser_data();
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="EditAndDeleteEntryPage.php">Edit and Delete</a>
         </li>
          <li class="nav-item">
           <a class="nav-link" href="AddEntryPage.php">Add Entry Page</a>
@@ -82,7 +80,7 @@ $resultAllUser = GetAllUser_data();
       <div style="height: 20px;"></div>
 
       <div class="col-md-8">
-        <form method="POST" action="config/GetSpecificEntry.php">
+        <form method="POST" action="index.php">
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="personal_id" class="form-label">Personal_id:</label>
@@ -106,6 +104,59 @@ $resultAllUser = GetAllUser_data();
       </div>
     </div>
   </div>
-  
+</body>
+</html>
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<!-- Search for entry -->
+
+<?php 
+
+require_once 'config/db.php';
+
+$personal_ID = $_POST["personal_id"];
+$prename = $_POST["vorname"];
+$name = $_POST["nachname"];
+$kostenstelle =  $_POST["kostenstelle"];
+
+global $conn;
+$query = "SELECT * FROM benutzer WHERE personal_id LIKE '$personal_ID' OR vorname LIKE '$prename' OR nachname LIKE '$name' OR kostenstelle LIKE '$kostenstelle'";
+
+$result = mysqli_query($conn,$query);
+
+?>
+
+<!-- HTML-Tabelle zur Anzeige der Ergebnisse -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th>Spaltenname 1</th>
+      <th>Spaltenname 2</th>
+      <th>Spaltenname 3</th>
+      <th>Spaltenname 4</th>
+      <!-- Weitere Spaltennamen hier -->
+    </tr>
+  </thead>
+  <tbody>
+    <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+      <tr>
+        <td><?php echo $row['Personal_ID']; ?></td>
+        <td><?php echo $row['Vorname']; ?></td>
+        <td><?php echo $row['Nachname']; ?></td>
+        <td><?php echo $row['Kostenstelle']; ?></td>
+        <!-- Weitere Spaltenwerte hier -->
+      </tr>
+    <?php } ?>
+  </tbody>
+</table>
 </body>
 </html>

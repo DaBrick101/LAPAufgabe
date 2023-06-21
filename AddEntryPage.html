@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <title>Document</title>
+    </head>
+
+    <nav class="navbar navbar-expand-lg bg-dark-subtle">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><span><img style="max-height: 30px; margin-right: 20px;"src="https://img.icons8.com/ios/250/FFFFFF/source-code.png"></img></span>LAP Praktische</a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="indexRebuild.php">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="AddEntryPage.php">Add Entry Page</a>
+            </li>
+            
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <body>
+    <div class="container text-center">
+        <div style="height: 30px;"></div>
+        <div class="jumbotron">
+            <h2 class="display-3">Home - LAP Praktische</h2>
+            <div style="height: 30px;"></div>
+            <p class="lead">Diese Website beinhaltet die Praktische LAP Übung</p>
+            <hr class="my-2">
+        </div>
+        <div style="height: 50px;"></div>
+        <h2>REGISTER</h2>
+        <div style="height: 20px;"></div>
+
+    </div>
+    
+
+    <div class="container ">
+      <form name="addEntry" id="addEntryForm" action="PHPFunctions/AddEntry.php" method="post" class="row g-3 align-items-center">
+            <div class="col-md-2">
+                <label for="modellname">Modellname:</label>
+                <input type="text" class="form-control" id="modellname" name="modellname" required>
+            </div>
+            <div class="col-md-3">
+                <label for="herstellername">Herstellername:</label>
+                <input type="text" class="form-control" id="herstellername" name="herstellername" required>
+            </div>
+            <div class="col-md-3">
+                <label for="baujahr">Baujahr:</label>
+                <input type="number" class="form-control" id="baujahr" name="baujahr" required>
+            </div>
+            <div class="col-md-4">
+                <label for="preis">Preis:</label>
+                <input type="number" class="form-control" id="preis" name="preis" required>
+            </div>
+            <div class="col-md-6">
+                <label for="farbe">Farbe:</label>
+                <input type="text" class="form-control" id="farbe" name="farbe" required>
+            </div>
+            <div class="col-md-6">
+                <label for="kilometerstand">Kilometerstand:</label>
+                <input type="number" class="form-control" id="kilometerstand" name="kilometerstand" required>
+            </div>
+            <div class="col-md-6">
+                <label for="erstzulassung">Erstzulassung:</label>
+                <input type="date" class="form-control" id="erstzulassung" name="erstzulassung" required>
+            </div>
+            <div class="col-md-6">
+                <label for="erstzulassung">Land:</label>
+                <input type="text" class="form-control" id="land" name="land" required>
+            </div>
+            
+            <button type="submit" class="btn btn-warning">Submit</button>
+        </div> 
+    </div>
+    </body>
+</html>
