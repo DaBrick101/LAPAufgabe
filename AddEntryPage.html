@@ -37,15 +37,16 @@
             <hr class="my-2">
         </div>
         <div style="height: 50px;"></div>
-        <h2>REGISTER</h2>
+        <h2>ADD ENTRY</h2>
         <div style="height: 20px;"></div>
 
     </div>
     
 
     <div class="container ">
-      <form name="addEntry" id="addEntryForm" action="PHPFunctions/AddEntry.php" method="post" class="row g-3 align-items-center">
-            <div class="col-md-2">
+      <form name="addEntry" id="addEntryForm" action="PHPFunctions/AddEntry.php" method="post" class="">
+        <div class="row justify-content-md-center">
+            <div class="col-md-3">
                 <label for="modellname">Modellname:</label>
                 <input type="text" class="form-control" id="modellname" name="modellname" required>
             </div>
@@ -53,32 +54,33 @@
                 <label for="herstellername">Herstellername:</label>
                 <input type="text" class="form-control" id="herstellername" name="herstellername" required>
             </div>
-            <div class="col-md-3">
-                <label for="baujahr">Baujahr:</label>
-                <input type="number" class="form-control" id="baujahr" name="baujahr" required>
-            </div>
-            <div class="col-md-4">
+            
+            <div class="col-md-2">
                 <label for="preis">Preis:</label>
                 <input type="number" class="form-control" id="preis" name="preis" required>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <label for="farbe">Farbe:</label>
                 <input type="text" class="form-control" id="farbe" name="farbe" required>
             </div>
-            <div class="col-md-6">
+        </div>
+        <div class="row justify-content-md-center mt-3">
+            <div class="col-md-3">
                 <label for="kilometerstand">Kilometerstand:</label>
                 <input type="number" class="form-control" id="kilometerstand" name="kilometerstand" required>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <label for="erstzulassung">Erstzulassung:</label>
                 <input type="date" class="form-control" id="erstzulassung" name="erstzulassung" required>
             </div>
-            <div class="col-md-6">
-                <label for="erstzulassung">Land:</label>
-                <input type="text" class="form-control" id="land" name="land" required>
+            <div class="col-md-1">
+                <label for="baujahr">Baujahr:</label>
+                <input type="number" class="form-control" id="baujahr" name="baujahr" required>
             </div>
-            
+        </div>
+         <div class="text-center mt-3">
             <button type="submit" class="btn btn-warning">Submit</button>
+        </div>
         </div> 
     </div>
     </body>
