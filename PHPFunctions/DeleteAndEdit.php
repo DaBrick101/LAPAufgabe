@@ -101,8 +101,8 @@ if (isset($_POST['submit'])) {
                         echo "<td>" . $row["Kilometerstand"] . "</td>";
                         echo "<td>" . $row["Erstzulassung"] . "</td>";
                         echo "<td>
-                                <a href='?edit=" . $row["AutoID"] . "'>Bearbeiten</a> |
-                                <a href='?delete=" . $row["AutoID"] . "' onclick='return confirm(\"Möchtest du das Auto wirklich löschen?\")'>Löschen</a>
+                                <a class='btn btn-secondary m-1' href='?edit=" . $row["AutoID"] . "'>Bearbeiten</a> 
+                                <a class='btn btn-danger' href='?delete=" . $row["AutoID"] . "' onclick='return confirm(\"Möchtest du das Auto wirklich löschen?\")'>Löschen</a>
                             </td>";
                         echo "</tr>";
                     }
