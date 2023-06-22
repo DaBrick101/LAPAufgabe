@@ -70,13 +70,13 @@ $conn->close();
             <a class="nav-link" href="..\HTML\AddEntryPage.html">Add Entry</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="..\HTML\DeleteAndEditPage.html">Delete/Edit</a>
+                <a class="nav-link" href="DeleteAndEdit.php">Delete/Edit</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="..\HTML\GetAllEntrysPage.html">Get All Entries</a>
+                <a class="nav-link" href="GetAllEntries.php">Get All Entries</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="..\HTML\SearchEntryPage.html">Search</a>
+                <a class="nav-link" href="SearchEntry.php">Search</a>
             </li>
             
         </ul>
@@ -85,19 +85,20 @@ $conn->close();
     </nav>
 
     <body>
-    <div class="container text-center">
-        <div style="height: 30px;"></div>
-        <div class="jumbotron">
-            <h2 class="display-3">Home - LAP Praktische</h2>
+        <div class="container text-center">
             <div style="height: 30px;"></div>
-            <p class="lead">Diese Website beinhaltet die Praktische LAP Übung</p>
-            <hr class="my-2">
+            <div class="jumbotron">
+                <h2 class="display-3">Home - LAP Praktische</h2>
+                <div style="height: 30px;"></div>
+                <p class="lead">Diese Website beinhaltet die Praktische LAP Übung</p>
+                <hr class="my-2">
+            </div>
+            <div style="height: 50px;"></div>
+            <h2>ADD ENTRY</h2>
+            <div style="height: 20px;"></div>
+            <h4>Entry successfully added!</h4>
+            <p>Add another Entry?</p>
+            <a class="btn btn-primary" href="..\HTML\AddEntryPage.html" role="button"></a>
         </div>
-        <div style="height: 50px;"></div>
-        <h2>ADD ENTRY</h2>
-        <div style="height: 20px;"></div>
-        <h4>Entry successfully added!</h4>
-        <p>Add another Entry?</p>
-        <a class="btn btn-primary" href="..\HTML\AddEntryPage.html" role="button"></a>
-    </div>
+    </body>
     
